@@ -1,31 +1,46 @@
-# LMSFD: A Lightweight Multi-Scale Feature-Decoupled Network for Ion-Exchange Membrane Defect Detection
+<div align="center">
+  <img src="banner.svg" alt="LMSFD — Ion-exchange membrane defect detection" width="100%" />
 
-This repository presents selected figures from our work on visual defect detection for ion-exchange membranes. We introduce **LMSFD**, a lightweight detector designed to improve localization and recognition of defects with different sizes and appearances. We also construct **IM11-DET**, an industrial membrane-defect dataset collected with a roll-fed line-scan imaging system.
+  <h1>LMSFD</h1>
+  <p><strong>A Lightweight Multi-Scale Feature-Decoupled Network<br />for Ion-Exchange Membrane Defect Detection</strong></p>
+  <p>Industrial visual inspection &nbsp;·&nbsp; Multi-scale defects &nbsp;·&nbsp; Lightweight detection</p>
+</div>
 
-> **Code availability:** The source code will be released after the paper is accepted.
+---
 
-## Overview
+Flexible ion-exchange membranes present low-contrast defects that vary widely in size and often appear together. **LMSFD** separates spatial and semantic feature refinement before cross-scale fusion. This page shares a preview of the **IM11-DET** dataset and selected detection results.
 
-- **IM11-DET:** 1,843 images, 8,514 annotated defect instances, and 11 defect categories.
-- **Evaluation:** Four production batches are used for training and a fifth batch is held out for validation.
-- **Selected result:** LMSFD achieves 87.3% AP<sub>50</sub> and 71.6% AP<sub>50–95</sub> on the held-out batch with 10.2 million parameters.
+> [!NOTE]
+> **Code release:** The source code will be made available after the paper is accepted.
+
+## At a glance
+
+| IM11-DET | Evaluation | LMSFD on the held-out batch |
+| :---: | :---: | :---: |
+| **1,843** images · **8,514** instances<br />**11** defect categories | **4** production batches for training<br />**1** batch held out for validation | **87.3%** AP<sub>50</sub> · **71.6%** AP<sub>50–95</sub><br />**10.2M** parameters |
 
 ## Figures
 
-### IM11-DET dataset
+### 01 &nbsp; Dataset and imaging system
 
-Representative samples, the imaging setup, category-wise instance counts, and defect-size distribution.
+Six representative samples, the roll-fed line-scan setup, category-wise instance counts, and defect-size distribution in IM11-DET.
 
-![Overview of the IM11-DET dataset](datasets.png)
+[![IM11-DET dataset and imaging system](datasets.png)](datasets.png)
 
-### Qualitative detection results
+<p align="center"><sub>Figure 1 · IM11-DET dataset overview. Click to view at full resolution.</sub></p>
 
-Examples comparing LMSFD with five representative detectors on four IM11-DET images. Orange solid boxes show ground truth; red, yellow, and green dashed boxes indicate false positives, false negatives, and true positives, respectively.
+### 02 &nbsp; Quantitative comparison
 
-![Qualitative detection comparison on IM11-DET](visualization.png)
+LMSFD is compared with 11 other detectors across eight metrics. The radar plot normalizes each metric across methods; the right panel shows gains over the RT-DETR baseline in percentage points.
 
-### Quantitative comparison
+[![Detection performance comparison on IM11-DET](Comparison.png)](Comparison.png)
 
-Performance across eight metrics compared with 11 other detectors. The right panel shows LMSFD's gains over the RT-DETR baseline in percentage points.
+<p align="center"><sub>Figure 2 · Performance comparison on IM11-DET. Click to view at full resolution.</sub></p>
 
-![Detection performance comparison on IM11-DET](Comparison.png)
+### 03 &nbsp; Qualitative comparison
+
+Predictions from LMSFD and five representative detectors on four IM11-DET images. Orange solid boxes mark ground truth; red, yellow, and green dashed boxes mark false positives, false negatives, and true positives, respectively.
+
+[![Qualitative detection comparison on IM11-DET](visualization.png)](visualization.png)
+
+<p align="center"><sub>Figure 3 · Detection examples. Click to view at full resolution.</sub></p>

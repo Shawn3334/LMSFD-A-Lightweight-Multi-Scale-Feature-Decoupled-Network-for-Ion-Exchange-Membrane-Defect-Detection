@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">LMSFD research preview</title>
+  <desc id="desc">A dark blue research banner with stylized line-scan membrane imagery and defect detection boxes.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#091629"/>
+      <stop offset="0.58" stop-color="#0e2940"/>
+      <stop offset="1" stop-color="#0d3d49"/>
+    </linearGradient>
+    <linearGradient id="membrane" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#9ed5c4" stop-opacity=".22"/>
+      <stop offset="1" stop-color="#5dbbb7" stop-opacity=".05"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#80ded0" stop-opacity=".02"/>
+      <stop offset=".5" stop-color="#b9f4dc" stop-opacity=".56"/>
+      <stop offset="1" stop-color="#80ded0" stop-opacity=".02"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#b0e7df" stroke-opacity=".055" stroke-width="1"/>
+    </pattern>
+    <clipPath id="rightClip"><rect x="730" y="28" width="440" height="304" rx="16"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="360" rx="18" fill="url(#background)"/>
+  <rect width="1200" height="360" rx="18" fill="url(#grid)"/>
+  <path d="M0 296 C255 240 392 368 706 298 S1041 245 1200 295" fill="none" stroke="#6bd4c0" stroke-opacity=".12" stroke-width="2"/>
+
+  <rect x="57" y="43" width="161" height="29" rx="14.5" fill="#1b605e" stroke="#61c9b4" stroke-opacity=".5"/>
+  <circle cx="73" cy="57.5" r="3.5" fill="#88e9cb"/>
+  <text x="86" y="62" fill="#b5f0de" font-family="Arial, Helvetica, sans-serif" font-size="12" font-weight="700" letter-spacing="2">RESEARCH PREVIEW</text>
+
+  <text x="54" y="172" fill="#f4fbfa" font-family="Arial, Helvetica, sans-serif" font-size="94" font-weight="700" letter-spacing="-4">LMSFD</text>
+  <rect x="58" y="189" width="51" height="4" rx="2" fill="#6bd4c0"/>
+  <text x="57" y="230" fill="#e5f4f1" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">Ion-exchange membrane</text>
+  <text x="57" y="262" fill="#e5f4f1" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="600">defect detection</text>
+  <text x="58" y="312" fill="#96b9bd" font-family="Arial, Helvetica, sans-serif" font-size="15" letter-spacing="1.2">DATASET  /  DETECTION  /  RESULTS</text>
+
+  <rect x="730" y="28" width="440" height="304" rx="16" fill="#0d2635" stroke="#529b9b" stroke-opacity=".4"/>
+  <g clip-path="url(#rightClip)">
+    <path d="M742 28 L1182 28 L1096 332 L652 332 Z" fill="url(#membrane)"/>
+    <path d="M703 77 C856 52 1049 94 1201 66 M704 131 C856 106 1049 148 1201 120 M704 185 C856 160 1049 202 1201 174 M704 239 C856 214 1049 256 1201 228 M704 293 C856 268 1049 310 1201 282" fill="none" stroke="url(#line)" stroke-width="6"/>
+    <path d="M703 84 C856 59 1049 101 1201 73 M704 138 C856 113 1049 155 1201 127 M704 192 C856 167 1049 209 1201 181 M704 246 C856 221 1049 263 1201 235 M704 300 C856 275 1049 317 1201 289" fill="none" stroke="#b2ebdf" stroke-opacity=".11" stroke-width="1"/>
+
+    <rect x="836" y="105" width="47" height="47" rx="4" fill="#73e0c3" fill-opacity=".08" stroke="#78e8c8" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="859" cy="128" r="5" fill="#8af0d0" fill-opacity=".8"/>
+    <rect x="1018" y="166" width="94" height="34" rx="4" fill="#73e0c3" fill-opacity=".08" stroke="#78e8c8" stroke-width="2" stroke-dasharray="6 4"/>
+    <path d="M1037 181 L1083 187" stroke="#9fe9d2" stroke-width="3" stroke-linecap="round" stroke-opacity=".65"/>
+    <rect x="905" y="235" width="38" height="54" rx="4" fill="#efb077" fill-opacity=".09" stroke="#efb077" stroke-width="2" stroke-dasharray="6 4"/>
+    <circle cx="924" cy="261" r="5" fill="#efb077" fill-opacity=".7"/>
+  </g>
+  <path d="M748 46 h18 M748 46 v18 M1152 46 h-18 M1152 46 v18 M748 314 h18 M748 314 v-18 M1152 314 h-18 M1152 314 v-18" fill="none" stroke="#8cd9cc" stroke-opacity=".65" stroke-width="2"/>
+  <text x="757" y="313" fill="#9fd8cf" font-family="Arial, Helvetica, sans-serif" font-size="11" letter-spacing="1.6">LINE-SCAN INSPECTION</text>
+</svg>
