@@ -1,46 +1,43 @@
 <div align="center">
-  <img src="banner.svg" alt="LMSFD — Ion-exchange membrane defect detection" width="100%" />
-
   <h1>LMSFD</h1>
-  <p><strong>A Lightweight Multi-Scale Feature-Decoupled Network<br />for Ion-Exchange Membrane Defect Detection</strong></p>
-  <p>Industrial visual inspection &nbsp;·&nbsp; Multi-scale defects &nbsp;·&nbsp; Lightweight detection</p>
+  <p><em>A Lightweight Multi-Scale Feature-Decoupled Network for<br>Ion-Exchange Membrane Defect Detection</em></p>
+  <p><a href="#im11-det">Dataset</a> · <a href="#detection-results">Results</a> · <a href="#code">Code</a></p>
 </div>
 
----
+LMSFD is a lightweight detector for visual inspection of ion-exchange membranes. It refines spatial and semantic features separately before combining information across scales, targeting small, low-contrast and co-occurring defects.
 
-Flexible ion-exchange membranes present low-contrast defects that vary widely in size and often appear together. **LMSFD** separates spatial and semantic feature refinement before cross-scale fusion. This page shares a preview of the **IM11-DET** dataset and selected detection results.
+**IM11-DET:** 1,843 images · 8,514 annotated defects · 11 categories  
+**LMSFD:** 87.3% AP<sub>50</sub> · 71.6% AP<sub>50–95</sub> · 10.2M parameters on a held-out production batch
 
-> [!NOTE]
-> **Code release:** The source code will be made available after the paper is accepted.
+## IM11-DET
 
-## At a glance
+Images were collected with a roll-fed line-scan inspection system. Four production batches were used for training and a fifth was held out for validation. The figure shows representative defects, the imaging setup, category counts and defect-size distribution.
 
-| IM11-DET | Evaluation | LMSFD on the held-out batch |
-| :---: | :---: | :---: |
-| **1,843** images · **8,514** instances<br />**11** defect categories | **4** production batches for training<br />**1** batch held out for validation | **87.3%** AP<sub>50</sub> · **71.6%** AP<sub>50–95</sub><br />**10.2M** parameters |
+<p align="center">
+  <a href="datasets.png"><img src="datasets.png" alt="IM11-DET samples, inspection system, and dataset statistics" width="900"></a><br>
+  <sub>IM11-DET: representative samples and dataset overview</sub>
+</p>
 
-## Figures
+## Detection results
 
-### 01 &nbsp; Dataset and imaging system
+### Quantitative comparison
 
-Six representative samples, the roll-fed line-scan setup, category-wise instance counts, and defect-size distribution in IM11-DET.
+LMSFD is compared with 11 other detectors on IM11-DET. The right panel shows its gains over the RT-DETR baseline in percentage points.
 
-[![IM11-DET dataset and imaging system](datasets.png)](datasets.png)
+<p align="center">
+  <a href="Comparison.png"><img src="Comparison.png" alt="Comparison of LMSFD with other detectors" width="900"></a><br>
+  <sub>Performance across eight detection metrics</sub>
+</p>
 
-<p align="center"><sub>Figure 1 · IM11-DET dataset overview. Click to view at full resolution.</sub></p>
+### Qualitative comparison
 
-### 02 &nbsp; Quantitative comparison
+Examples from four validation images compare LMSFD with five representative detectors. Orange boxes indicate ground truth; red, yellow and green dashed boxes indicate false positives, false negatives and true positives.
 
-LMSFD is compared with 11 other detectors across eight metrics. The radar plot normalizes each metric across methods; the right panel shows gains over the RT-DETR baseline in percentage points.
+<p align="center">
+  <a href="visualization.png"><img src="visualization.png" alt="Qualitative detection comparison on IM11-DET" width="800"></a><br>
+  <sub>Detection examples on IM11-DET</sub>
+</p>
 
-[![Detection performance comparison on IM11-DET](Comparison.png)](Comparison.png)
+## Code
 
-<p align="center"><sub>Figure 2 · Performance comparison on IM11-DET. Click to view at full resolution.</sub></p>
-
-### 03 &nbsp; Qualitative comparison
-
-Predictions from LMSFD and five representative detectors on four IM11-DET images. Orange solid boxes mark ground truth; red, yellow, and green dashed boxes mark false positives, false negatives, and true positives, respectively.
-
-[![Qualitative detection comparison on IM11-DET](visualization.png)](visualization.png)
-
-<p align="center"><sub>Figure 3 · Detection examples. Click to view at full resolution.</sub></p>
+The source code will be released after the paper is accepted.
